@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Graph Plotter</title>
+</head>
+<body>
+  <h2> Daneasy's Graph Plotter</h2> 
+  <label for="">Choose Graph Type</label>
+<select name="" id="graphtype">
+    <option value="line">Line Graph</option>
+    <option value="bar">Bar Graph</option>
+</select>
+
+  <table id="datatable">
+<thead>
+    <tr><th>X</th> <th>Y</th></tr>
+</thead>
+<tbody>
+    <tr>
+    <td><input type="number" step="any" /></td>
+    <td><input type="number" step="any" /></td>
+    </tr>
+</tbody>
+</table>
+<div>
+   <button onclick="plotgraph()">Plot Graph</button>
+   <canvas id="graphcanvas" width="600" height="400"></canvas>
+</div>  
+<script src="script.js"></script>
+
+<footer class="site-footer" role="contentinfo" aria-label="Footer">
+  <div class="footer-inner">
+    <p class="copyright">© 2025 <a  rel="noopener" target="_blank">Daneasy Graph</a>. All rights reserved.</p>
+    <p class="small">Crafted with care • Designed 2025</p>
+  </div>
+</footer>
+
+</body>
+</html>
