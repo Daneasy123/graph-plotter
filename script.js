@@ -37,7 +37,16 @@ function plotgraph() {
 
     let points = [];
     const rows = table.rows;
-    for (let i = 0; i < rows.length; i++) {
+    let rowCount = rows.length;
+    // Ignore last row if both X and Y are empty
+    if (rowCount > 0) {
+        const lastX = rows[rowCount - 1].cells[0].querySelector('input').value;
+        const lastY = rows[rowCount - 1].cells[1].querySelector('input').value;
+        if (lastX === '' && lastY === '') {
+            rowCount--;
+        }
+    }
+    for (let i = 0; i < rowCount; i++) {
         const x = parseFloat(rows[i].cells[0].querySelector('input').value);
         const y = parseFloat(rows[i].cells[1].querySelector('input').value);
         if (!isNaN(x) && !isNaN(y)) {
